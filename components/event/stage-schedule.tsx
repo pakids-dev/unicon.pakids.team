@@ -17,11 +17,13 @@ export function StageSchedule({ schedules, currentTime, onScheduleClick }: Stage
   const [selectedDay, setSelectedDay] = useState("2025-09-28")
 
   const formatTime = (dateString: string) => {
-    return new Date(dateString).toLocaleTimeString("ko-KR", {
+    const date = new Date(dateString)
+    return new Intl.DateTimeFormat("ko-KR", {
       hour: "2-digit",
       minute: "2-digit",
       hour12: false,
-    })
+      timeZone: "Asia/Seoul",
+    }).format(date)
   }
 
   const getTypeColor = (type: string) => {

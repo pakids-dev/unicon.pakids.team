@@ -10,7 +10,6 @@ import { SortSelect } from "@/components/search/sort-select"
 import { Pagination } from "@/components/ui/pagination"
 import { StageSchedule } from "@/components/event/stage-schedule"
 import { BoothMap } from "@/components/event/booth-map"
-import { DesignControlPanel } from "@/components/design-control-panel"
 import { ContactModal } from "@/components/ui/contact-modal"
 import { Button } from "@/components/ui/button"
 import { Play, Calendar, MapPin, Users } from "lucide-react"
@@ -326,8 +325,7 @@ export default function HomePage() {
         copyright="© 2025 UNIDEV. All rights reserved."
       />
 
-      {/* Design Control Panel */}
-      <DesignControlPanel />
+      
 
       {/* Contact Modal */}
       <ContactModal isOpen={isContactModalOpen} onClose={() => setIsContactModalOpen(false)} />
